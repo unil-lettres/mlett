@@ -1,8 +1,8 @@
 # Introduction
 
-Docker-compose file and application settings for the Mailpit server installation and configuration.
+Docker-compose file and application settings for the Mailpit server installation and configuration. This is used internally by the Faculty of Arts IT-Web team.
 
-[Mailpit](https://github.com/axllent/mailpit) Mailpit is a small, fast, low memory, zero-dependency, multi-platform email testing tool & API for developers.
+[Mailpit](https://github.com/axllent/mailpit) is a small, fast, low memory, zero-dependency, multi-platform email testing tool & API for developers.
 
 # Development with Docker
 
