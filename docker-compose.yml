@@ -1,0 +1,21 @@
+version: '3.9'
+
+networks:
+  mailpit-net:
+    driver: bridge
+
+name: mailpit
+
+services:
+  mailpit-server:
+    image: axllent/mailpit:latest
+    container_name: mailpit
+    env_file:
+      - ./.env
+    ports:
+      - "127.0.0.1:8484:8025"
+      - "1025:1025"
+    volumes:
+      - ./data:/data
+    networks:
+      - mailpit-net
