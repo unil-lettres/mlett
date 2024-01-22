@@ -14,7 +14,7 @@ A working [Docker](https://docs.docker.com/engine/installation/) installation is
 
 Please make sure to copy & rename the **example.env** file to **.env**.
 
-``cp env.example .env``
+``cp example.env .env``
 
 You can replace the values if needed to match you server & environment. Mainly the path to the SQLite database and the path to the authentication file.
 
