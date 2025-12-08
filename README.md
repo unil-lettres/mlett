@@ -22,7 +22,7 @@ You can replace the values if needed to match you server & environment. Mainly t
 
 Build & run all the containers for this project.
 
-``docker-compose up -d``
+``docker compose up -d``
 
 ### Frontends
 
@@ -46,7 +46,7 @@ You can replace the values if needed, but the default ones should work for produ
 
 Build & run all the containers for this project:
 
-`docker-compose up -d`
+`docker compose up -d`
 
 Use a reverse proxy configuration to map the url to port `8484`.
 Example configurations are included in [proxy examples](https://mailpit.axllent.org/docs/configuration/proxy).
