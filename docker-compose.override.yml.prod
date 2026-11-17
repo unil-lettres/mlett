@@ -4,6 +4,7 @@
 
 services:
   mailpit-server:
+    image: axllent/mailpit:latest
     restart: unless-stopped
     deploy:
       resources:

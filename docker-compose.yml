@@ -6,7 +6,6 @@ name: mailpit
 
 services:
   mailpit-server:
-    image: axllent/mailpit:latest
     container_name: mailpit
     env_file:
       - ./.env

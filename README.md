@@ -1,6 +1,6 @@
 # Introduction
 
-Docker-compose file and application settings for the Mailpit server installation and configuration. This is used internally by the Faculty of Arts IT-Web team.
+Docker configuration and application settings for the Mailpit server. This is used internally by the Faculty of Arts IT-Web team.
 
 [Mailpit](https://github.com/axllent/mailpit) is a small, fast, low memory, zero-dependency, multi-platform email testing tool & API for developers.
 
@@ -10,21 +10,27 @@ Docker-compose file and application settings for the Mailpit server installation
 
 A working [Docker](https://docs.docker.com/engine/installation/) installation is mandatory.
 
-### Docker environment variables file
+## Environment files
 
 Please make sure to copy & rename the **example.env** file to **.env**.
 
-``cp example.env .env``
+``cp env.example .env``
 
 You can replace the values if needed to match you server & environment. Mainly the path to the SQLite database and the path to the authentication file.
 
-### Build & run
+Make sure to copy & rename the **docker-compose.override.yml.dev** file to **docker-compose.override.yml**.
+
+``cp docker-compose.override.yml.dev docker-compose.override.yml``
+
+You can replace the values if needed, but the default ones should work for local development.
+
+## Installation & configuration
 
 Build & run all the containers for this project.
 
-``docker compose up -d``
+``docker compose up`` (add -d if you want to run in the background and silence the logs)
 
-### Frontends
+## Frontends
 
 To access the main application please use the following link.
 
@@ -32,21 +38,26 @@ http://localhost:8484
 
 # Deployment with Docker
 
+## Environment files
+
 Copy and rename the environment file.
 
-``cp example.env .env``
+``cp env.example .env``
 
 You should replace the values since the default ones are not ready for production.
 
-Please also make sure to copy & rename the **docker-compose.override.yml.prod** file to **docker-compose.override.yml**.
+Make sure to copy & rename the **docker-compose.override.yml.prod** file to **docker-compose.override.yml**.
 
 `cp docker-compose.override.yml.prod docker-compose.override.yml`
 
 You can replace the values if needed, but the default ones should work for production.
 
-Build & run all the containers for this project:
+## Installation & configuration
+
+Build & run all the containers for this project.
 
 `docker compose up -d`
 
-Use a reverse proxy configuration to map the url to port `8484`.
-Example configurations are included in [proxy examples](https://mailpit.axllent.org/docs/configuration/proxy).
+## Reverse proxy
+
+Use a reverse proxy configuration to map the url to port `8484`. Configuration examples can be found at [https://mailpit.axllent.org/docs/configuration/proxy](https://mailpit.axllent.org/docs/configuration/proxy).
